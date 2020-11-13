@@ -1,0 +1,23 @@
+11/13(金)
+・flaskでWebサーバをローカルで立ち上げてみる
+pythonでflask用いて実行した(flask_sample.py)。簡単なhtmlファイル(index.html)を書き正しくWebページが表示されることを確認した。
+・Dockerコンテナ内に外部アクセス可能なサーバを立ち上げる
+・Dockerコンテナ内でffmpegでソースをビルドし、動画をHLS形式で保存
+Dockerコンテナを作成し立ち上げることがどうしてもできない。
+"Service docker start"でエラーなくDockerは起動するが次に"Service docker status"で確認するとNot runningになっている。（保留）
+"docker-compose ps"コマンドでコンテナを確認したいが、.ymlファイルが必要と言われ苦戦。
+VScodeでDockerfileを実行し、ようやく.ymlファイルをゲット。
+"docker-compose up"で起動したいがプログラムエラーがでた。
+デバッグしようとしたが解決しなかった。
+dockerが公開している"hello world"コンテナは動いたので、Dockerは動いているっぽい？
+・Dockerを使わずにffmpegを使いMP4をHLS形式へ変換
+ffmpegをインストールして、"ffmpeg -i test.mp4 test.m3u8"を実行するだけでできた。
+ffmpegのインストールはそこそこ時間がかかる。
+あとはこれをDockerfileに書くだけだが、Dockerコンテナの作り方や開始の仕方が難しい。
+・Dockerコンテナ内でffmpegでソースをビルドし、動画をHLS形式で保存（続き）
+Docker imageをインストールした（jrottenberg/ffmpeg）。
+Docker imageをもとにビルドして、コンテナをを起動する。今までは自分の中でのDockerのイメージがずれていたため、混乱していた節があった。
+"Dockerfile"→（ビルド）→"Docker image"→（run）→"コンテナ作成、起動"の順番
+先ほどインストールしたDockerimageだと無理そうだったため、Dockerfileをつくる。
+ここで、Dockerfileに"apt-get install ffmpeg"とかいて、ビルドしたが、止まりはしないがインストール時にエラーがでている感じであった。
+Dockerfileの書き方が悪いのかビルドのやり方が悪いのか、はたまたwslやVScodeが悪いのかわからないまま終わってしまった。
