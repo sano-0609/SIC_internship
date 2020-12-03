@@ -1,0 +1,54 @@
+11/26(木)
+●yolov2の画像認識(tensorflowを使用)
+「環境構築」
+sudo apt update(念の為)
+git clone https://github.com/thrieu/darkflow.git
+cd darkflow
+wget https://pjreddie.com/media/files/yolo.weights
+pip3 install numpy tensorflow Cython
+python setup.py build_ext --inplace
+pip3 install opencv-python
+あとはサンプルコード（yolov2_test.py）を実行するだけだが、
+tensorflowの2.xだとtensorflow.contribが未対応なためエラーがでてしまう。
+そのため、tensorflowを1.xにする必要があるが、1.xはpython3.8には未対応ということだった。
+自分はpyenvでバージョンを3.6.5に変えて実行した。
+「結果」
+{'label': 'dog', 'confidence': 0.7691978, 'topleft': {'x': 136, 'y': 214}, 'bottomright': {'x': 322, 'y': 539}}]
+結果はjson形式？で帰って来た。画像に変換して視覚的に結果を見たかったが、めんどくさそうなのでやめた。
+
+●yolov2のリアルタイム認識（ノートPCの内蔵カメラを使用）
+現状Devboeadではカメラが使えないので、一旦ノートPCの内蔵カメラで物体認識をしてみた。
+ソースはネットに転がってたものをコピペして、自分のPCの環境に合わせていじった。（ファイルのPATHや名前など）
+結果としてできた。動きに3秒くらいのラグがあるが、人や物が70~80%くらいで認識されていることが確認できた。
+
+●yolov3のデモ実行
+yolov2よりも精度が向上したyolov3が発表されていたので、デモプログラムを動かしてみた。
+git clone https://github.com/pjreddie/darknet
+cd darknet
+make
+wget https://pjreddie.com/media/files/yolov3.weights
+./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
+「yolov3_結果」
+dog: 100%
+truck: 92%
+bicycle: 99%
+比較のためにyolov2.weightsをもってきて回してみた。
+「yolov2_結果」
+dog: 82%
+truck: 64%
+bicycle: 85%
+yolov3の方が全体的に15%程あがり、かなり精度が良くなっている。
+
+●yolov3でリアルタイム認識（ノートPCの内蔵カメラ使用）
+githubにちょうどよい学習済みモデルとソースがあったので活用。pytorchを使用。
+git clone https:// github.com/ayooshkathuria/pytorch-yolo-v3.git
+cd pytorch-yolo-v3
+wget https://pjreddie.com/media/files/yolov3.weights
+pip install torch===1.4.0 torchvision===0.5.0 -f https://download.pytorch.org/whl/torch_stable.html
+pip install opencv-python matplotlib pandas
+python cam_demo.py
+9.15fpsでyolov2よりもラグが少なく、滑らかに動いていた。tpuで試してみるのが楽しみ。
+
+
+
+
