@@ -1,0 +1,6 @@
+
+ノートPCでmp4動画が見れなかったのでツールをインストール
+sudo apt install ubuntu-restricted-extras
+sudo apt install libdvd-pkg
+sudo dpkg-reconfigure libdvd-pkg
+
