@@ -3,7 +3,7 @@ import time
 
 r = sr.Recognizer()
 start = time.time()
-with sr.AudioFile("sample2.wav") as source:
+with sr.AudioFile("./hls/l_00002.ts") as source:
     audio = r.record(source)
 text = r.recognize_google(audio, language='ja-JP')
 print(text)
