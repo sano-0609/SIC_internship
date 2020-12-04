@@ -4,3 +4,7 @@ sudo apt install ubuntu-restricted-extras
 sudo apt install libdvd-pkg
 sudo dpkg-reconfigure libdvd-pkg
 
+///
+cd hls
+python input.mp4
+~/hls/hlsに.tsと.m3u8がある
