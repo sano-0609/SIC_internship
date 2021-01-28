@@ -1,0 +1,13 @@
+pyannote:
+	tutorials:
+		data_preperation:
+			AMI:
+				MixHeadset.test.rttm
+			amicorpus:
+				TS3003c:
+					audio:
+						TS3003c.Mix-Headset.wav
+			TS3003c_audio.rttm
+			pyannote_dia.py
+			pyannote_demo.py
+			pyannote_notebook_demo.py
