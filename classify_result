@@ -1,0 +1,50 @@
+parrot.jpg
+tensorflow - 1.14
+tflite-runtime -2.5.0
+pillow -5.4.1
+numpy 1.16.2
+
+mobilenet_v1_1.0_224_quant.tflite
+labels_mobilenet_quant_v1_224.txt
+
+N - 10
+Model Loaded Successfully.
+Image Shape ( 224 , 224 )
+Classificaiton Time = 0.135 seconds.
+Image Label is : macaw , with Accuracy : 99.61 %.
+Model Loaded Successfully.
+Image Shape ( 224 , 224 )
+Classificaiton Time = 0.137 seconds.
+Image Label is : macaw , with Accuracy : 99.61 %.
+Model Loaded Successfully.
+Image Shape ( 224 , 224 )
+Classificaiton Time = 0.137 seconds.
+Image Label is : macaw , with Accuracy : 99.61 %.
+Model Loaded Successfully.
+Image Shape ( 224 , 224 )
+Classificaiton Time = 0.137 seconds.
+Image Label is : macaw , with Accuracy : 99.61 %.
+Model Loaded Successfully.
+Image Shape ( 224 , 224 )
+Classificaiton Time = 0.135 seconds.
+Image Label is : macaw , with Accuracy : 99.61 %.
+Model Loaded Successfully.
+Image Shape ( 224 , 224 )
+Classificaiton Time = 0.137 seconds.
+Image Label is : macaw , with Accuracy : 99.61 %.
+Model Loaded Successfully.
+Image Shape ( 224 , 224 )
+Classificaiton Time = 0.137 seconds.
+Image Label is : macaw , with Accuracy : 99.61 %.
+Model Loaded Successfully.
+Image Shape ( 224 , 224 )
+Classificaiton Time = 0.137 seconds.
+Image Label is : macaw , with Accuracy : 99.61 %.
+Model Loaded Successfully.
+Image Shape ( 224 , 224 )
+Classificaiton Time = 0.137 seconds.
+Image Label is : macaw , with Accuracy : 99.61 %.
+Model Loaded Successfully.
+Image Shape ( 224 , 224 )
+Classificaiton Time = 0.138 seconds.
+Image Label is : macaw , with Accuracy : 99.61 %.

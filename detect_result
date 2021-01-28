@@ -1,0 +1,42 @@
+dog-cycle-car.png
+numpy 1.16.2
+opencv 3.4.3
+
+models/frozen_inference_graph.pb
+models/ssd_mobilenet_v2_coco_2018_03_29.pbtxt
+
+N-10
+ 2.0 0.8527787 bicycle
+ 18.0 0.96929586 dog
+time 1.1381614208221436[sec]
+ 2.0 0.8527787 bicycle
+ 18.0 0.96929586 dog
+time 1.1170008182525635[sec]
+ 2.0 0.8527787 bicycle
+ 18.0 0.96929586 dog
+time 1.165320634841919[sec]
+ 2.0 0.8527787 bicycle
+ 18.0 0.96929586 dog
+time 1.3417375087738037[sec]
+ 2.0 0.8527787 bicycle
+ 18.0 0.96929586 dog
+time 1.3875541687011719[sec]
+ 2.0 0.8527787 bicycle
+ 18.0 0.96929586 dog
+time 1.351858139038086[sec]
+ 2.0 0.8527787 bicycle
+ 18.0 0.96929586 dog
+time 1.135317087173462[sec]
+ 2.0 0.8527787 bicycle
+ 18.0 0.96929586 dog
+time 1.3577661514282227[sec]
+ 2.0 0.8527787 bicycle
+ 18.0 0.96929586 dog
+time 1.1864614486694336[sec]
+ 2.0 0.8527787 bicycle
+ 18.0 0.96929586 dog
+time 1.1650989055633545[sec]
+
+
+
+
